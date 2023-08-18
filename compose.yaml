@@ -1,0 +1,32 @@
+# /compose.yaml
+version: "3"
+name: "dcs"
+
+services:
+  scheduler:
+    image: "yusefmaali/docker-container-scheduler:latest"
+    restart: always
+    environment:
+      - 'CONTAINER_SCHEDULES=
+      [
+        {"container":"dcs-test-exit-0-1","crontab":"*/1 * * * *"},
+        {"container":"dcs-test-exit-1-1","crontab":"*/2 * * * *"},
+        {"container":"dcs-test-exit-3-1","crontab":"*/3 * * * *"}
+      ]'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  test-exit-0:
+    image: "alpine"
+    restart: no
+    command: sh -c 'exit 0'
+
+  test-exit-1:
+    image: "alpine"
+    restart: no
+    command: sh -c 'sleep 20; exit 1'
+
+  test-exit-3:
+    image: "alpine"
+    restart: no
+    command: sh -c 'sleep 30; exit 3'

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkUUID" value="029ae852-2f47-4621-8aed-54fe734d8765" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (docker-container-scheduler)" project-jdk-type="Python SDK" />
+</project>

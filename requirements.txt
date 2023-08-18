@@ -1,0 +1,2 @@
+python-dotenv==1.0.0
+container-scheduler~=1.0.0
