@@ -34,7 +34,15 @@ as possible.
 
 ## Examples (compose.yaml)
 
-The `compose.yaml` file is a fully working example of a docker compose file.  
+The [compose.yaml](<https://github.com/yusefmaali/docker-container-scheduler/blob/master/compose.yaml>) file is a fully working example of a docker compose file.  
 It will create three containers executing a simple bash script (`sh -c 'exit 0'`).  
 The `scheduler` container will run the three containers every 1 min, every 2 mins and every 3 mins.  
 Take a look at the logs to see how the scheduler works.
+
+## Meta
+
+Yusef Maali - contact@yusefmaali.net
+
+Distributed under the MIT license. See [LICENSE.txt](<https://github.com/yusefmaali/docker-container-scheduler/blob/master/LICENSE.txt>) for more information.
+
+https://github.com/yusefmaali/docker-container-scheduler
